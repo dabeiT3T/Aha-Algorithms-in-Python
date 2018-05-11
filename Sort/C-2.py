@@ -1,33 +1,30 @@
 #!/usr/bin/env python3
 
 # read
-m = int(input('range (0~m): '))
-
 numbers = input('numbers: ')
 L = list(map(int, numbers.split(' ')))
 
-# bucket
-S = [0] * (m+1)
 # sort
-for num in L:
-    S[num] += 1
+for i in range(len(L)-1):
+    for j in range(len(L)-i-1):
+        if L[j] < L[j+1]:
+            L[j], L[j+1] = L[j+1], L[j]
+
 # print
 # desc sort
-# for i in range(m, -1, -1):
-for i in range(m+1):
-    for j in range(S[i]):
-        print(i, end=' ')
+# for x in L[::-1]:
+for x in L:
+    print(x, end=' ')
 
 # new line
 print('')
 
 '''
 Sample:
-range (0~m): 1000   <= sort num from 0~1000
 numbers: 8 100 50 22 15 6 1 1000 999 0
                     <= nums splited with one space
-0 1 6 8 15 22 50 100 999 1000
+1000 999 100 50 22 15 8 6 1 0
                     <= print answer
 
-Complexity: O(M+N)
+Complexity: O(N*N)
 '''
