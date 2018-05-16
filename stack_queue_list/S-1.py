@@ -4,6 +4,8 @@
 # http://bbs.codeaha.com/problem-12010.html
 
 # read
+# get n, but in python we dont need it
+n = input()
 L = list(input('encrypted qq: '))
 
 Q = []
