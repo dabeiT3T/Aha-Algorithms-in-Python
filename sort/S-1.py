@@ -19,7 +19,7 @@ for i in range(m+1):
         print(i, end=' ')
 
 # new line
-print('')
+print()
 
 '''
 Sample:

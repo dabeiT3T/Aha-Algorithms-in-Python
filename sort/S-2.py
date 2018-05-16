@@ -17,7 +17,7 @@ for x in L:
     print(x, end=' ')
 
 # new line
-print('')
+print()
 
 '''
 Sample:
