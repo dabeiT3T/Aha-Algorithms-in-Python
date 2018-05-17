@@ -30,7 +30,7 @@ print(flag)
 '''
 Sample:
 ahaha           <= input
-YES
+YES             <= print answer
 
 But, in python, when we got stack and anthor part, we can
 # ----------------- codes goes to -----------------
