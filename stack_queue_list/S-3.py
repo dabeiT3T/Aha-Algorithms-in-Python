@@ -34,7 +34,7 @@ while player1 and player2:
     if not player1: break
     # player2 turn
     t = player2.pop(0)
-    #judge
+    # judge
     discard(player2, t)
 
 # print
