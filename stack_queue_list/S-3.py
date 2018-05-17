@@ -21,8 +21,8 @@ def discard(player, poker):
         L.append(poker)
 
 # read
-player1 = list(map(int, input().split()))
-player2 = list(map(int, input().split()))
+player1 = input().split()
+player2 = input().split()
 
 # game begin
 while player1 and player2:
@@ -41,11 +41,13 @@ while player1 and player2:
 utf8stdout = open(1, 'w', encoding='utf-8')
 if player1:
     print('小哼win', file=utf8stdout)
-    print('小哼当前手中的牌是 ' + str(player1)[1:-1].replace(',', ''), file=utf8stdout)
+    # print('小哼当前手中的牌是 ' + str(player1)[1:-1].replace(',', ''), file=utf8stdout)
+    print('小哼当前手中的牌是 ' + ' '.join(player1), file=utf8stdout)
 else:
     print('小哈win', file=utf8stdout)
-    print('小哈当前手中的牌是 ' + str(player2)[1:-1].replace(',', ''), file=utf8stdout)
-print('桌上的牌是 ' + str(L)[1:-1].replace(',', ''), file=utf8stdout)
+    # print('小哈当前手中的牌是 ' + str(player2)[1:-1].replace(',', ''), file=utf8stdout)
+    print('小哼当前手中的牌是 ' + ' '.join(player2), file=utf8stdout)
+print('桌上的牌是 ' + ' '.join(L), file=utf8stdout)
 
 '''
 Sample:
@@ -58,6 +60,5 @@ Sample:
 # In python3, by default, it cannot print unicode due to its sys.stdout setting.
   (<_io.TextIOWrapper name='<stdout>' mode='w' encoding='US-ASCII'>)
   U see, it can only print US-ASCII, so we need to pass a utf-8 stdout to print().
-# It's better to use 'for' to print list here, so u don't need to use slice & replace.
-  They may take more time : )
+# ' '.join(L) element in L must be str
 '''
