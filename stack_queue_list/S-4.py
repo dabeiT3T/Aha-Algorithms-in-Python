@@ -26,6 +26,7 @@ for data in L:
     else:
         q = head = D
 
+# insert n
 q = head
 while q:
     if not q['next'] or q['next']['data'] > n:
@@ -70,5 +71,5 @@ Sample:
   a.pnext = b
   if a.pnext:
       pass
-  print(a.pnext.pnext)
+  print(a.pnext.pnext.data)
 '''
