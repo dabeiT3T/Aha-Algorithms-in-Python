@@ -1,4 +1,20 @@
 #!/usr/bin/env python3
+'''
+Sample:
+ahaha           <= input
+YES             <= print answer
+
+But, in python, when we got stack and anthor part, we can
+# ----------------- codes goes to -----------------
+# ATTENTION: L.reverse() returns None!
+L.reverse()
+if L == stack:
+    print('YES')
+else:
+    print('NO')
+# ---------------- codes ends here ----------------
+COOOOL : )
+'''
 
 # Quiz url
 # http://bbs.codeaha.com/problem-12013.html
@@ -26,20 +42,3 @@ for x in L:
         break
 
 print(flag)
-
-'''
-Sample:
-ahaha           <= input
-YES             <= print answer
-
-But, in python, when we got stack and anthor part, we can
-# ----------------- codes goes to -----------------
-# ATTENTION: L.reverse() returns None!
-L.reverse()
-if L == stack:
-    print('YES')
-else:
-    print('NO')
-# ---------------- codes ends here ----------------
-COOOOL : )
-'''

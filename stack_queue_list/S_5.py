@@ -1,4 +1,15 @@
 #!/usr/bin/env python3
+'''
+Sample:
+9                           <= how many nums
+2 3 5 8 9 10 18 26 32       <= nums
+6                           <= insert num
+2 3 5 6 8 9 10 18 26 32     <= print answer
+
+# codes in the book may cause bug : )
+  U cannot insert num which is either smaller or bigger than any of the nums.
+  Because it hasn't defined head.
+'''
 
 # Quiz url
 # Not Found
@@ -40,15 +51,3 @@ while right[q]:
     q = right[q]
 # last one and new line
 print()
-
-'''
-Sample:
-9                           <= how many nums
-2 3 5 8 9 10 18 26 32       <= nums
-6                           <= insert num
-2 3 5 6 8 9 10 18 26 32     <= print answer
-
-# codes in the book may cause bug : )
-  U cannot insert num which is either smaller or bigger than any of the nums.
-  Because it hasn't defined head.
-'''

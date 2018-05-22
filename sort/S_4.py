@@ -1,4 +1,17 @@
 #!/usr/bin/env python3
+'''
+Sample:
+numbers: 20 40 32 67 40 20 89 300 400 15
+                    <= nums splited with one space
+8
+15 20 32 40 67 89 300 400
+                    <= print answer
+
+Complexity: O(NlogN)
+'''
+
+# Quiz url
+# http://bbs.codeaha.com/problem-12001.html
 
 # This is quick sort
 def quickSort(start, end):
@@ -31,12 +44,14 @@ def quickSort(start, end):
 
 # read
 numbers = input('numbers: ')
-L = list(map(int, numbers.split(' ')))
+# distinct
+L = list(set(map(int, numbers.split(' '))))
 
 # sort
 quickSort(0, len(L)-1)
 
 # print
+print(len(L))
 # desc sort
 # for x in L[::-1]:
 for x in L:
@@ -44,14 +59,3 @@ for x in L:
 
 # new line
 print()
-
-'''
-Sample:
-numbers: 6 1 2 7 9 3 4 5 10 8
-                    <= nums splited with one space
-1 2 3 4 5 6 7 8 9 10
-                    <= print answer
-
-Complexity: O(N*N)
-Ave. Complexity: O(NlogN)
-'''

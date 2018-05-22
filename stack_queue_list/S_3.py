@@ -1,5 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+'''
+Sample:
+2 4 1 2 5 6                      <= player1's pokers
+3 1 3 5 6 4                      <= player2's pokers
+小哈win                          <= print answer
+小哈当前手中的牌是 1 6 5 2 3 4 1
+桌上的牌是 3 4 5 6 2
+
+# In python3, by default, it cannot print unicode due to its sys.stdout setting.
+  (<_io.TextIOWrapper name='<stdout>' mode='w' encoding='US-ASCII'>)
+  U see, it can only print US-ASCII, so we need to pass a utf-8 stdout to print().
+# ' '.join(L) element in L must be str
+'''
 
 # Quiz url
 # Not Found
@@ -48,17 +61,3 @@ else:
     # print('小哈当前手中的牌是 ' + str(player2)[1:-1].replace(',', ''), file=utf8stdout)
     print('小哼当前手中的牌是 ' + ' '.join(player2), file=utf8stdout)
 print('桌上的牌是 ' + ' '.join(L), file=utf8stdout)
-
-'''
-Sample:
-2 4 1 2 5 6                      <= player1's pokers
-3 1 3 5 6 4                      <= player2's pokers
-小哈win                          <= print answer
-小哈当前手中的牌是 1 6 5 2 3 4 1
-桌上的牌是 3 4 5 6 2
-
-# In python3, by default, it cannot print unicode due to its sys.stdout setting.
-  (<_io.TextIOWrapper name='<stdout>' mode='w' encoding='US-ASCII'>)
-  U see, it can only print US-ASCII, so we need to pass a utf-8 stdout to print().
-# ' '.join(L) element in L must be str
-'''

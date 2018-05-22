@@ -1,4 +1,29 @@
 #!/usr/bin/env python3
+'''
+Sample:
+9                           <= how many nums
+2 3 5 8 9 10 18 26 32       <= nums
+6                           <= insert num
+2 3 5 6 8 9 10 18 26 32     <= print answer
+
+# In python, we can find the insert position x first and then
+  D.insert(x, data)
+# Or, use sort
+  D.append(data)
+  D.sort()
+# Or, u can define a class which is more like linked-list
+  class LinkedList:
+      data = None
+      pnext = None
+
+  a = LinkedList()
+  b = LinkedList()
+  a.data = b.data = 3
+  a.pnext = b
+  if a.pnext:
+      pass
+  print(a.pnext.pnext.data)
+'''
 
 # Quiz url
 # Not Found
@@ -47,29 +72,3 @@ while q:
     q = q['next']
 # new line
 print()
-
-'''
-Sample:
-9                           <= how many nums
-2 3 5 8 9 10 18 26 32       <= nums
-6                           <= insert num
-2 3 5 6 8 9 10 18 26 32     <= print answer
-
-# In python, we can find the insert position x first and then
-  D.insert(x, data)
-# Or, use sort
-  D.append(data)
-  D.sort()
-# Or, u can define a class which is more like linked-list
-  class LinkedList:
-      data = None
-      pnext = None
-
-  a = LinkedList()
-  b = LinkedList()
-  a.data = b.data = 3
-  a.pnext = b
-  if a.pnext:
-      pass
-  print(a.pnext.pnext.data)
-'''

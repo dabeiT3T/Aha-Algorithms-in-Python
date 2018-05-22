@@ -1,4 +1,13 @@
 #!/usr/bin/env python3
+'''
+Sample:
+numbers: 8 100 50 22 15 6 1 1000 999 0
+                    <= nums splited with one space
+1000 999 100 50 22 15 8 6 1 0
+                    <= print answer
+
+Complexity: O(N*N)
+'''
 
 # read
 numbers = input('numbers: ')
@@ -18,13 +27,3 @@ for x in L:
 
 # new line
 print()
-
-'''
-Sample:
-numbers: 8 100 50 22 15 6 1 1000 999 0
-                    <= nums splited with one space
-1000 999 100 50 22 15 8 6 1 0
-                    <= print answer
-
-Complexity: O(N*N)
-'''
