@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 '''
-13 13
+13 13               <= input
 #############
 #GG.GGG#GGG.#
 ###.#G#G#G#G#
@@ -15,7 +15,8 @@
 #G#.#G#G#.#G#
 #GG.GGG#G.GG#
 #############
-
+将炸弹放置在(9, 9), 最多可以消灭8个敌人
+                    <= print answer
 '''
 
 # Quiz url
@@ -35,6 +36,7 @@ for i in range(1, row-1):
         if M[i][j] == '.':
             mons = 0
             # up
+            # u'd better use nomarl loop, here just practice list parsing
             for x in [L[j] for (tc, L) in enumerate(M) if tc < i][::-1]:
                 if x == '#':
                     break
