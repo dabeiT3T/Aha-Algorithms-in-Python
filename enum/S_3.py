@@ -14,6 +14,9 @@
 一共可以拼出9个不同的等式
 '''
 
+# Quiz url
+# http://bbs.codeaha.com/problem-12026.html
+
 # read
 n = int(input()) - 4
 
