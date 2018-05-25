@@ -8,12 +8,12 @@
 312
 321
 # it may spend more than 1s when enter 9 :(
-  yes, it costs 0.722367s on my computer,
+  yes, it costs 0.71067s on my computer,
   on 1.6Ghz processor
   when output redirects to a file.
   
 # but on server, on 2.50GHz processor
-  it costs only 0.44s 
+  it costs only 0.43s
   when output redirects to a file.
 '''
 
@@ -48,9 +48,10 @@ for x in range(n):
     S += chr(ord('1')+x)
 # get answer
 L = recursion(S)
+L.sort()
 
 # print
-for x in sorted(L):
+for x in L:
     print(x)
     
 # end = time.clock()
