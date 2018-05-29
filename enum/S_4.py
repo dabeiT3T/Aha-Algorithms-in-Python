@@ -15,6 +15,20 @@
 # but on server, on 2.50GHz processor
   it costs only 0.42s
   when output redirects to a file.
+# algorithm
+  if n == 1, just print 1;
+  if n == 2, we have 2, and we have 1's permutations,
+  put 2 to 1's left, middle and right:
+  that is, 21 and 12;
+  if n == 3, we have 3, and we have (1 and 2)'s permutations,
+  put 3 to each permutation's left, middle and right:
+  to 21 => 321, 231, 213
+  to 12 => 312, 132, 123
+  if n == 4, yes, we have 4 and we have (1, 2 and 3)'s permutations
+  u are right, it's recursion.
+  n's permutations =    |- 1 (n = 1)
+                        |_ put n to left, middle, right 
+                            of each (n-1)'s permutation (n > 1)
 '''
 
 # Quiz url
