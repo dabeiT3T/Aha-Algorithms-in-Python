@@ -9,6 +9,9 @@
   it costs only 3.43s
   when output redirects to a file.
 # it seems my method is better :)
+  maybe because i used python way
+# also, print() takes too much time
+  without print() it costs 1.019406s
 '''
 
 # Quiz url
