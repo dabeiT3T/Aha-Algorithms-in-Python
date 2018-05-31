@@ -67,6 +67,7 @@ def dfs(x, y, depth):
             dfs(tx, ty, depth+1)
             L[tx][ty] = 0
 
+L[sx][sy] = 1
 dfs(sx, sy, 0)
-
+# print
 print(minStep if minStep != None else 'No Way!')
