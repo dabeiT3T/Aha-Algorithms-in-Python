@@ -20,7 +20,7 @@
 '''
 
 # Quiz url
-# http://bbs.codeaha.com/problem-12010.html
+# https://bbs.codeaha.com/problem-12033.html
 
 # read
 row, col = map(int, (input().split()))
