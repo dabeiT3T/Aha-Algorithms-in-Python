@@ -16,6 +16,10 @@
 #############
 将炸弹放置在(7, 11)处，最多可以消灭10个敌人
                     <= print answer
+
+# compared bfs with here dfs on my air, 1.6Ghz processor
+# it cost 0.000774s with bfs, while
+# it cost 0.000735s with dfs.
 '''
 
 # Quiz url
@@ -82,30 +86,25 @@ def getNum(x: int, y: int) -> None:
         mx = x
         my = y
 
-def bfs() -> None:
+def dfs(x: int, y: int) -> None:
     '''
-    Breadth-First Search
+    Depth-First Search
     '''
-    global Q
-    while(Q):
-        # here step is useless
-        (x, y, step), *Q = Q
-        getNum(x, y)
-        for dx, dy in D:
-            tx = x + dx
-            ty = y + dy
-            # out of range
-            if tx < 0 or tx >= n or ty < 0 or ty >= m:
-                continue
-            # has passed or not a road
-            if L[tx][ty] == 0 and M[tx][ty] == '.':
-                Q.append((tx, ty, step+1))
-                L[tx][ty] = 1
+    getNum(x, y)
+    for dx, dy in D:
+        tx = x + dx
+        ty = y + dy
+        # out of range
+        if tx < 0 or tx >= n or ty < 0 or ty >= m:
+            continue
+        # has passed or not a road
+        if L[tx][ty] == 0 and M[tx][ty] == '.':
+            L[tx][ty] = 1
+            dfs(tx, ty)
 
 # init
 L[sx][sy] = 1
-Q = [(sx, sy, 0)]
-bfs()
+dfs(sx, sy)
 
 # end = time.clock()
 # print(end-start)
