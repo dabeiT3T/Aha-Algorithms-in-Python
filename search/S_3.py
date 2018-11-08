@@ -25,7 +25,7 @@ No Way!             <= print answer
 '''
 
 # Quiz url
-# http://bbs.codeaha.com/problem-12032.html
+# https://bbs.codeaha.com/problem-12032.html
 
 # read
 n, m = map(int, input().split())
