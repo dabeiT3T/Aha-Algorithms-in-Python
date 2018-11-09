@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 '''
 13 13 3 3           <= row, col, start x, y
 #############       <= map
