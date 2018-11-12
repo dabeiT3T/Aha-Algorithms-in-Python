@@ -1,16 +1,21 @@
 #!/usr/bin/env python3
 '''
-5 5         <= V, E
+5 7 1 5     <= V, E, start, end vertex
 1 2         <= G
 1 3
-1 5
+2 3
 2 4
+3 4
 3 5
-1 2 3 5 4   <= print answer
+4 5
+2           <= print answer
 '''
 
+# Quiz url
+# https://bbs.codeaha.com/problem-12038.html
+
 # read
-_v, _e = map(int, input().split())
+_v, _e, startVertex, endVertex = map(int, input().split())
 # init G
 '''
   0 inf inf
@@ -29,18 +34,23 @@ for i in range(_e):
 L = [0 for i in range(_v)]
 
 # function
-def bfs() -> None:
+def bfs():
     global Q
     while Q:
-        vertex, *Q = Q
-        print(vertex, end=' ')
+        (vertex, cnt), *Q = Q
+        if vertex == endVertex:
+            print(cnt)
+            break
+
         for keyV, edge in enumerate(G[vertex-1]):
             if edge == 1 and not L[keyV]:
                 L[keyV] = 1
-                Q.append(keyV+1)
+                Q.append((keyV+1, cnt+1))
+    # let's review while-else
+    else:
+        print('impossible')
 
 # init
-L[0] = 1
-Q = [1]
+L[startVertex-1] = 1
+Q = [(startVertex, 0)]
 bfs()
-print()

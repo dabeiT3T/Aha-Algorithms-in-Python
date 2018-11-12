@@ -18,26 +18,26 @@ inf   0 inf
 inf inf   0
 '''
 G = [
-    [0 if i == j else float('inf') for j in range(_e)]
-    for i in range(_e)
+    [0 if i == j else float('inf') for j in range(_v)]
+    for i in range(_v)
 ]
 for i in range(_e):
-    x, y = map(lambda x: int(x)-1, input().split())
+    x, y = map(lambda n: int(n)-1, input().split())
     G[x][y] = 1
     G[y][x] = 1
 # v has passed
 L = [0 for i in range(_v)]
 
 # function
-def dfs(v: int) -> None:
-    print(v, end=' ')
-    if v == _v:
+def dfs(vertex: int) -> None:
+    print(vertex, end=' ')
+    if vertex == _v:
         return None
 
-    for kv, e in enumerate(G[v-1]):
-        if  e == 1 and not L[kv]:
-            L[kv] = 1
-            dfs(kv+1)
+    for keyV, edge in enumerate(G[vertex-1]):
+        if  edge == 1 and not L[keyV]:
+            L[keyV] = 1
+            dfs(keyV+1)
 
 # init
 L[0] = 1
