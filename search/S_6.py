@@ -33,15 +33,15 @@ D = {
     'down': 4
 }
 # flag
-_f = False
+found = False
 
 
 # function
 def dfs(x: int, y: int, direct: int) -> None:
-    global _f
+    global found
     # get the target
     if x == n-1 and y == m:
-        _f = True
+        found = True
         print(*P)
         return None
 
@@ -107,5 +107,5 @@ F = {
 dfs(0, 0, D['left'])
 
 # print
-if not _f:
+if not found:
     print('impossible')
