@@ -14,7 +14,7 @@
 
 # Dijkstra is used to get the shortest path
 # of one specified vertex
-# with positive weight
+# with positive weight.
 # here we use adjacency matrix.
 '''
 
