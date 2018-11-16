@@ -17,7 +17,7 @@
 
 # Floyd-Warshall is used to get the shortest path
 # between any two vertices
-# with positive weight
+# with positive weight.
 '''
 
 # read

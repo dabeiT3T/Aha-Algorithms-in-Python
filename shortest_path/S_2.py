@@ -11,6 +11,11 @@
 4 6 15
 5 6 4
 0 1 8 4 13 17   <= print answer
+
+# Dijkstra is used to get the shortest path
+# of one specified vertex
+# with positive weight
+# here we use adjacency matrix.
 '''
 
 # read
