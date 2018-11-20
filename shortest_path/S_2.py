@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 '''
-6 9
-1 2 1
+6 9             <= vertices, edges
+1 2 1           <= G
 1 3 12
 2 3 9
 2 4 3
