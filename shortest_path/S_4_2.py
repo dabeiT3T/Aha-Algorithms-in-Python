@@ -11,8 +11,7 @@
 0 2 5 9 9           <= print answer
 
 # Bellman-Ford optimized with queue.
-# here we use adjacency list with array
-# (which is list in python).
+# here we use adjacency matrix.
 '''
 
 # read

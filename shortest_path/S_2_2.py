@@ -49,9 +49,6 @@ for x in range(_edge):
         _next.append(None)
     first[u] = x
 
-print(G)
-print(first)
-print(_next)
 # suppose starting vertex
 startVertex = 0
 
