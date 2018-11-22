@@ -14,7 +14,8 @@ T = list(map(int, input().split()))
 
 # function
 def siftDown(node: int, cnt: int) -> None:
-    global T
+    # changeable vars
+    # global T
     # temp which child node (value) is shorter
     tmp = node;
     # left child node
@@ -34,7 +35,7 @@ def createHeap() -> None:
         siftDown(i, _nodes)
 
 def heapSort() -> None:
-    global T
+    # global T
     for i in range(1, _nodes):
         T[0], T[_nodes-i] = T[_nodes-i], T[0]
         siftDown(1, _nodes-i)

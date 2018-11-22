@@ -14,7 +14,8 @@ T = list(map(int, input().split()))
 
 # function
 def siftDown(node: int) -> None:
-    global T
+    # changeable vars
+    # global T
     # temp which child node (value) is shorter
     tmp = node;
     # left child node
@@ -34,7 +35,7 @@ def createHeap() -> None:
         siftDown(i)
 
 def deleteMin() -> int:
-    global T
+    # global T
     T[0], T[-1] = T[-1], T[0]
     minNodeValue = T.pop()
     siftDown(1)
