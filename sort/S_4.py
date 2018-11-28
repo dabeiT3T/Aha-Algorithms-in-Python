@@ -16,7 +16,7 @@ Complexity: O(NlogN)
 # This is quick sort
 def quickSort(start, end):
     if start > end:
-        return;
+        return
 
     head = start
     tail = end
